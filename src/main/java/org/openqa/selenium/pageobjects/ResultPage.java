@@ -23,8 +23,7 @@ public class ResultPage {
 
     public WebElement findDynamicElement(By by, int timeOut) {
         WebDriverWait wait = new WebDriverWait(driver, timeOut);
-        WebElement element =  wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-        return element;
+        return  wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
     public boolean allResultsContainString(String text) {
