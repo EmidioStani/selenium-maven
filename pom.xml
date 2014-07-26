@@ -7,6 +7,22 @@
     <groupId>selenium-maven</groupId>
     <artifactId>selenium-maven</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>corp1</id>
+            <name>Corporate Repository</name>
+            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>propSnap</id>
+            <name>Propellors Snapshots</name>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -25,6 +41,5 @@
             <version>2.42.2</version>
         </dependency>
     </dependencies>
-
 
 </project>
